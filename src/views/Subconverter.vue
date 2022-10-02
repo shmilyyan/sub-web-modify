@@ -878,11 +878,11 @@ export default {
     };
   },
   created() {
-    document.title = "在线订阅转换工具";
+    document.title = "在线订阅转换";
     this.isPC = this.$getOS().isPc;
   },
   mounted() {
-    this.tanchuang();
+    // this.tanchuang();
     this.form.clientType = "clash";
     this.getBackendVersion();
     this.anhei();
