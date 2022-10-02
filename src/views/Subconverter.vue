@@ -842,7 +842,7 @@ export default {
         devid: "",
         interval: "",
         emoji: true,
-        nodeList: false,
+        nodeList: true,
         extraset: false,
         tls13: false,
         surgeForce: false,
