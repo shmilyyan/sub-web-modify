@@ -23,9 +23,17 @@ stages:
     - task: Docker@2
       inputs:
         containerRegistry: 'Docker Hub'
+        command: 'login'
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'Docker Hub'
         repository: 'subweb'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: |
           $(Build.BuildId)
           latest
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'Docker Hub'
+        command: 'logout'
